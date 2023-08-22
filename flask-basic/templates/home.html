@@ -1,0 +1,16 @@
+<h1>Hello {{ name }}, you are on the home page!</h1>
+{% if DISPLAY %}
+<h2>This is being Display</h2>
+{% else %}
+<h3>This is not being Display</h3>
+{% endif %}
+
+{% for x in list %}
+<h4>{{ x }}
+{% endfor %}
+
+{% for x in dict %}
+<h5>{{ x.name }}</h5>
+{% endfor %}
+
+<img src="{{ url_for('static', filename='images/linux.png') }}">
