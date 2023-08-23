@@ -4,13 +4,16 @@
 {% else %}
 <h3>This is not being Display</h3>
 {% endif %}
-
+<h4>Database Results</h4>
+{% for item in   results  %}
+    <li>ID: {{ item[0] }} Name: {{ item[1] }} Location: {{ item[2] }}</li>
+{% endfor %}
 {% for x in list %}
-<h4>{{ x }}
+<h7> {{ x }} </h7>
 {% endfor %}
 
 {% for x in dict %}
-<h5>{{ x.name }}</h5>
+<h8>{{ x.name }}</h8>
 {% endfor %}
 
 <img src="{{ url_for('static', filename='images/linux.png') }}">
